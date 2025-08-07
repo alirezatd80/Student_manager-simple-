@@ -26,8 +26,9 @@ def avg_student(DB:dict , name:str):
     cant_fine(DB , name)
     grades = []
     for i in DB[name].keys():
-       grades.append(sum(DB[name][i])/len(DB[name][i]))
+       grades.append(sum((DB[name][i]))/len(DB[name][i]))
     return sum(grades)/len(grades)
+
 def duplicate_name(DB:dict , name :str):
     if name in DB:
         raise Exception(f'this is => {name} add before !!! ')
