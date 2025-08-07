@@ -19,7 +19,15 @@ def add_grade(DB : dict , name :str , course:str , grade:float):
 def student_list(DB:dict):
     return list(DB.keys())
 
-
+def show_student_grades(DB:dict , name : str):
+    cant_fine(DB , name)
+    return (DB[name])
+def avg_student(DB:dict , name:str):
+    cant_fine(DB , name)
+    grades = []
+    for i in DB[name].keys():
+       grades.append(sum(DB[name][i])/len(DB[name][i]))
+    return sum(grades)/len(grades)
 def duplicate_name(DB:dict , name :str):
     if name in DB:
         raise Exception(f'this is => {name} add before !!! ')

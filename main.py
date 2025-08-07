@@ -1,10 +1,10 @@
-from functions import add_student ,add_course,add_grade,student_list
+from functions import add_student ,add_course,add_grade,student_list,show_student_grades,avg_student
 
 DB = {
     'alireza' : {
-        'math' : [12,15],
+        'math' : [20,20,20],
         'physic' : [20],
-        'programming' : [20 , 14]
+        'programming' : [20 ]
     } ,
     'mohammad' : {
         'math' : [10 , 9],
@@ -16,9 +16,6 @@ DB = {
 add_student(DB , 'ali')
 add_student(DB , 'mamad')
 add_course(DB, 'ali' , 'math')
-add_course(DB , 'alireza' , 'opennig')
 add_grade(DB , 'ali' , 'math' , 20)
 add_grade(DB , 'ali' , 'math' , 18)
-add_grade(DB , 'alireza' , 'opennig' , 8)
-
-print(student_list(DB))
+print(avg_student(DB , 'alireza'))
