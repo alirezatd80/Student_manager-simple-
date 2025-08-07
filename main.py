@@ -1,4 +1,4 @@
-from functions import add_student ,add_course,add_grade
+from functions import add_student ,add_course,add_grade,student_list
 
 DB = {
     'alireza' : {
@@ -14,10 +14,11 @@ DB = {
 }
 
 add_student(DB , 'ali')
+add_student(DB , 'mamad')
 add_course(DB, 'ali' , 'math')
 add_course(DB , 'alireza' , 'opennig')
 add_grade(DB , 'ali' , 'math' , 20)
 add_grade(DB , 'ali' , 'math' , 18)
 add_grade(DB , 'alireza' , 'opennig' , 8)
 
-print(DB)
+print(student_list(DB))
