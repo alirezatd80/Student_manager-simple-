@@ -16,6 +16,9 @@ def add_grade(DB : dict , name :str , course:str , grade:float):
     DB[name][course].append(grade)
     return DB
 
+def student_list(DB:dict):
+    return list(DB.keys())
+
 
 def duplicate_name(DB:dict , name :str):
     if name in DB:
